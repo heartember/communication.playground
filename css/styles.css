@@ -228,3 +228,18 @@ button{
   .details{grid-template-columns: 1fr;}
   .subscribe-form{grid-template-columns: 1fr;}
 }
+@media (max-width: 600px){
+  header.hero{
+    align-items: center;              /* was flex-end */
+    background-position: center top;  /* push faces lower */
+  }
+
+  .hero-inner{
+    padding: 56px 0 44px;
+  }
+
+  .subhead{
+    max-width: 34ch;
+  }
+}
+
