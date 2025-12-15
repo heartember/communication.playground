@@ -114,6 +114,16 @@ h1 {
   opacity: 0.9;
 }
 
+.hero-facts {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(6px);
+}
+
 .cta-row {
   display: flex;
   flex-wrap: wrap;
@@ -130,7 +140,7 @@ h1 {
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.22);
   backdrop-filter: blur(6px);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .btn:hover {
@@ -375,6 +385,18 @@ button:focus-visible {
     padding: 0 16px; /* Tighter margins on small screens */
   }
 
+  header.hero {
+    min-height: 90svh; /* Taller hero on mobile */
+    align-items: flex-end; /* Push content to bottom */
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.45) 100%),
+      url("../images/comm-play-hero.png") center 25%/cover no-repeat;
+  }
+
+  .hero-inner {
+    padding: 32px 0 40px; /* More bottom padding */
+  }
+
   h1 {
     margin: 12px 0 10px;
     font-size: clamp(32px, 8vw, 38px);
@@ -399,30 +421,13 @@ button:focus-visible {
     border: 1px solid rgba(255, 255, 255, 0.25);
   }
 
-  header.hero {
-    min-height: 90svh; /* Taller hero on mobile */
-    align-items: flex-end; /* Push content to bottom */
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.45) 100%), 
-                url("../images/comm-play-hero.png") center 25%/cover no-repeat;
-  }
-
-  .hero-inner {
-    padding: 32px 0 40px; /* More bottom padding */
-  }
-
-  .hero-inner {
-    padding: 32px 0 28px;
-  }
-
-  .subhead {
-    max-width: 36ch;
-    font-size: 17px; /* Slightly larger for readability */
-    line-height: 1.5;
-  }
-
-  .kicker {
-    font-size: 12px; /* Keep readable */
-    padding: 9px 11px;
+  .hero-facts {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    padding: 9px 12px;
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.18);
   }
 
   .cta-row {
@@ -473,5 +478,11 @@ button:focus-visible {
 
   ul.clean li {
     margin-bottom: 8px; /* More space between list items */
+  }
+
+  .banner-tagline {
+    display: block; /* Shows only on mobile (desktop remains hidden) */
+    margin-bottom: 6px;
+    font-weight: 650;
   }
 }
