@@ -29,6 +29,7 @@ a {
 }
 
 abbr {
+  position: relative;
   text-decoration: underline dotted;
   text-decoration-color: rgba(255, 255, 255, 0.5);
   cursor: help;
@@ -37,6 +38,53 @@ abbr {
 
 abbr[title] {
   border-bottom: none;
+}
+
+/* CSS Tooltip for abbr */
+abbr::before {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  padding: 8px 12px;
+  background: rgba(11, 27, 30, 0.95);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+}
+
+abbr::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-2px);
+  border: 6px solid transparent;
+  border-top-color: rgba(11, 27, 30, 0.95);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+}
+
+abbr:hover::before,
+abbr:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+/* For mobile - show on tap */
+abbr:active::before,
+abbr:active::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
 }
 
 .wrap {
