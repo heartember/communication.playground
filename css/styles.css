@@ -89,7 +89,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 22px;
+  margin-top: 26px;
+  justify-content: center;
 }
 
 .btn {
@@ -137,6 +138,33 @@ main {
 
 section {
   margin-top: 34px;
+}
+
+.welcome-banner {
+  text-align: center;
+  padding: 16px 20px;
+  margin: -10px 0 20px;
+  background: linear-gradient(135deg, rgba(28, 110, 115, 0.08), rgba(244, 193, 106, 0.10));
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  font-size: 15px;
+}
+
+.welcome-banner p {
+  margin: 0;
+  color: rgba(11, 27, 30, 0.9);
+}
+
+.inline-link {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(28, 110, 115, 0.3);
+  transition: border-color 0.2s ease;
+}
+
+.inline-link:hover {
+  border-bottom-color: var(--teal);
 }
 
 .grid3 {
