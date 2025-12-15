@@ -34,15 +34,12 @@ abbr {
   text-decoration-color: rgba(255, 255, 255, 0.5);
   cursor: help;
   text-underline-offset: 3px;
-}
-
-abbr[title] {
   border-bottom: none;
 }
 
 /* CSS Tooltip for abbr */
-abbr::before {
-  content: attr(title);
+abbr[data-tooltip]::before {
+  content: attr(data-tooltip);
   position: absolute;
   bottom: 100%;
   left: 50%;
@@ -60,7 +57,7 @@ abbr::before {
   z-index: 100;
 }
 
-abbr::after {
+abbr[data-tooltip]::after {
   content: '';
   position: absolute;
   bottom: 100%;
@@ -74,17 +71,23 @@ abbr::after {
   z-index: 100;
 }
 
-abbr:hover::before,
-abbr:hover::after {
+abbr[data-tooltip]:hover::before,
+abbr[data-tooltip]:hover::after {
   opacity: 1;
   transform: translateX(-50%) translateY(-4px);
 }
 
-/* For mobile - show on tap */
-abbr:active::before,
-abbr:active::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-4px);
+/* Mobile: tap to toggle tooltip */
+@media (hover: none) and (pointer: coarse) {
+  abbr[data-tooltip]:focus::before,
+  abbr[data-tooltip]:focus::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+  }
+  
+  abbr[data-tooltip] {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 .wrap {
