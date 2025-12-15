@@ -248,6 +248,10 @@ button {
 
 /* MOBILE: preserve image, improve readability */
 @media (max-width: 600px) {
+  .wrap {
+    padding: 0 16px; /* Tighter margins on small screens */
+  }
+
   h1 {
     display: inline-block;
     padding: 10px 14px;
@@ -273,5 +277,43 @@ button {
 
   .subhead {
     max-width: 36ch;
+    font-size: 16px; /* Prevent text from being too small */
+  }
+
+  .kicker {
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 16px; /* Larger tap targets */
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .band {
+    padding: 18px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input,
+  button {
+    font-size: 16px; /* Prevent iOS zoom on focus */
+  }
+
+  button {
+    padding: 14px; /* Larger tap target */
   }
 }
