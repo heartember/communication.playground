@@ -332,35 +332,30 @@ button:focus-visible {
     margin: 12px 0 10px;
     font-size: clamp(32px, 8vw, 38px);
     line-height: 1.08;
-    /* Stronger contrast for text readability */
-    background: rgba(11, 27, 30, 0.85);
-    backdrop-filter: blur(8px);
-    padding: 12px 16px;
-    border-radius: 14px;
-    display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7),
+                 0 4px 40px rgba(0, 0, 0, 0.5);
   }
 
   .subhead {
-    background: rgba(11, 27, 30, 0.75);
-    backdrop-filter: blur(6px);
-    padding: 10px 14px;
-    border-radius: 12px;
-    display: inline-block;
-    margin-top: 10px;
+    max-width: 36ch;
+    font-size: 17px;
+    line-height: 1.5;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.7),
+                 0 4px 32px rgba(0, 0, 0, 0.5);
   }
 
   .kicker {
-    background: rgba(11, 27, 30, 0.7);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+    padding: 9px 11px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
   }
 
   header.hero {
-    min-height: 85svh; /* Even taller for more image */
-    align-items: center; /* Center content vertically */
-    /* Much lighter gradient - let image shine! */
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.25) 100%), 
+    min-height: 85svh;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.35) 100%), 
                 url("../images/comm-play-hero.png") center 25%/cover no-repeat;
   }
 
