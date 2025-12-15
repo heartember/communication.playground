@@ -353,10 +353,14 @@ button:focus-visible {
   }
 
   header.hero {
-    min-height: 85svh;
-    align-items: center;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.35) 100%), 
+    min-height: 90svh; /* Taller hero on mobile */
+    align-items: flex-end; /* Push content to bottom */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.45) 100%), 
                 url("../images/comm-play-hero.png") center 25%/cover no-repeat;
+  }
+
+  .hero-inner {
+    padding: 32px 0 40px; /* More bottom padding */
   }
 
   .hero-inner {
