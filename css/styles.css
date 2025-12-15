@@ -28,6 +28,17 @@ a {
   color: inherit;
 }
 
+abbr {
+  text-decoration: underline dotted;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  cursor: help;
+  text-underline-offset: 3px;
+}
+
+abbr[title] {
+  border-bottom: none;
+}
+
 .wrap {
   max-width: var(--max);
   margin: 0 auto;
