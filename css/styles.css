@@ -28,68 +28,6 @@ a {
   color: inherit;
 }
 
-abbr {
-  position: relative;
-  text-decoration: underline dotted;
-  text-decoration-color: rgba(255, 255, 255, 0.5);
-  cursor: help;
-  text-underline-offset: 3px;
-  border-bottom: none;
-}
-
-/* CSS Tooltip for abbr */
-abbr[data-tooltip]::before {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-8px);
-  padding: 8px 12px;
-  background: rgba(11, 27, 30, 0.95);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 8px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  z-index: 100;
-}
-
-abbr[data-tooltip]::after {
-  content: '';
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-2px);
-  border: 6px solid transparent;
-  border-top-color: rgba(11, 27, 30, 0.95);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  z-index: 100;
-}
-
-abbr[data-tooltip]:hover::before,
-abbr[data-tooltip]:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-4px);
-}
-
-/* Mobile: tap to toggle tooltip */
-@media (hover: none) and (pointer: coarse) {
-  abbr[data-tooltip]:focus::before,
-  abbr[data-tooltip]:focus::after {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-4px);
-  }
-  
-  abbr[data-tooltip] {
-    -webkit-tap-highlight-color: transparent;
-  }
-}
-
 .wrap {
   max-width: var(--max);
   margin: 0 auto;
