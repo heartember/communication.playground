@@ -184,6 +184,14 @@ section {
   color: rgba(11, 27, 30, 0.9);
 }
 
+.banner-tagline {
+  display: none; /* Hidden on desktop, shows on mobile */
+}
+
+.banner-cta {
+  margin-top: 0;
+}
+
 .inline-link {
   color: var(--teal);
   font-weight: 600;
